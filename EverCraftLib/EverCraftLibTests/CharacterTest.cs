@@ -7,10 +7,17 @@ namespace EverCraftLibTests
 	[TestFixture()]
 	public class CharacterTest
 	{
-		[Test()]
-		public void GivenACharaterHasAName()
+		Character character;
+
+		[SetUp()]
+		public void Setup()
 		{
-			var character = new Character ();
+			character = new Character();
+		}
+
+		[Test()]
+		public void HasAName()
+		{
 			character.Name = "Jonathan";
 			Assert.AreEqual (character.Name, "Jonathan");
 		}
@@ -18,21 +25,26 @@ namespace EverCraftLibTests
 		[TestCase(Alignment.Good, Alignment.Good)]
 		[TestCase(Alignment.Evil, Alignment.Evil)]
 		[TestCase(Alignment.Neutral, Alignment.Neutral)]
-		//[TestCase(Alignment.Neutral)]
-		//public int DivideTest(int n, int d)
-		public void GivenACharaterHasAnAlignment(Alignment alignment, Alignment expected) 
+		public void HasAnAlignment(Alignment alignment, Alignment expected) 
 		{
-			var character = new Character ();
 			character.Alignment = alignment;
 			Assert.AreEqual (character.Alignment, expected);
 		}
 
 		[Test]
-		public void CharacterHasArmorClass()
+		public void HasArmorClassOf10ByDefault()
 		{
-			var character = new Character();
 			Assert.AreEqual(character.ArmorClass, 10);
 		}
+
+		[Test]
+		public void HasHitPointsOf5ByDefault()
+		{
+			Assert.AreEqual(character.HitPoints, 5);
+		}
+
+
+
 	}
 }
 
