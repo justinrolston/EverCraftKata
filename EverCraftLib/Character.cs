@@ -14,5 +14,10 @@ namespace EverCraftLib
 			this.ArmorClass = 10;
 			this.HitPoints = 5;
 		}
+
+		public bool Attack(int roll, Character opponent)
+		{
+			return (roll >= opponent.ArmorClass);
+		}
 	}
 }

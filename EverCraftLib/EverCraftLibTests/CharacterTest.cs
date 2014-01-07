@@ -43,7 +43,14 @@ namespace EverCraftLibTests
 			Assert.AreEqual(character.HitPoints, 5);
 		}
 
-
+		[Test]
+		public void WhenAttackingWithRollOf1WithOppentArmorClassOf10()
+		{
+			var roll = 1;
+			var opponent = new Character ();
+			opponent.ArmorClass = 10; 
+			Assert.AreEqual (character.Attack(roll, opponent), false);
+		}
 
 	}
 }
