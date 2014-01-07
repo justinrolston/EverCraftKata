@@ -17,6 +17,7 @@ namespace EverCraftLibTests
 
 		[TestCase(Alignment.Good, Alignment.Good)]
 		[TestCase(Alignment.Evil, Alignment.Evil)]
+		[TestCase(Alignment.Neutral, Alignment.Neutral)]
 		//[TestCase(Alignment.Neutral)]
 		//public int DivideTest(int n, int d)
 		public void GivenACharaterHasAnAlignment(Alignment alignment, Alignment expected) 
