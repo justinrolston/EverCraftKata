@@ -7,4 +7,3 @@ namespace EverCraftLib
 		Good = 1, Evil = 2
 	}
 }
-

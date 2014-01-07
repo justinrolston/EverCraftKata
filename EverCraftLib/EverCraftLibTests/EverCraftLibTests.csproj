@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D73A6B99-FF52-4F1D-8AE8-2E581B584ED4}</ProjectGuid>
+    <ProjectGuid>{85114BBB-F9B9-4F5A-81B7-90148FD6796E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>EverCraftLib</RootNamespace>
-    <AssemblyName>EverCraftLib</AssemblyName>
+    <RootNamespace>EverCraftLibTests</RootNamespace>
+    <AssemblyName>EverCraftLibTests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,11 +28,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="Alignment.cs" />
+    <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="CharacterTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EverCraftLib.csproj">
+      <Project>{D73A6B99-FF52-4F1D-8AE8-2E581B584ED4}</Project>
+      <Name>EverCraftLib</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
