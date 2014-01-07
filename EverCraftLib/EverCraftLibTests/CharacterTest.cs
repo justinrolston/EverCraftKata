@@ -26,6 +26,13 @@ namespace EverCraftLibTests
 			character.Alignment = alignment;
 			Assert.AreEqual (character.Alignment, expected);
 		}
+
+		[Test]
+		public void CharacterHasArmorClass()
+		{
+			var character = new Character();
+			Assert.AreEqual(character.ArmorClass, 10);
+		}
 	}
 }
 
